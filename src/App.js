@@ -6,8 +6,7 @@ import PredictedResultComponent from './Components/PredictedResultComponent'
 import axios from 'axios';
 
 import './App.css';
-const endpoint = 'http://localhost:8000'
-
+const endpoint = 'http://127.0.0.1:8000'
 
 
 class App extends Component {

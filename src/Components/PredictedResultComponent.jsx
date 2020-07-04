@@ -48,7 +48,7 @@ export default (props) => (
                             <AlertButtonComponent status={data.status}/>
                         </div>
                         <div class="cell pred" data-title="nature">
-                            {data.nature}
+                    "Toxicity : {data.Toxic}<br/> Obscene : {data.Obscene} <br/> Threat : {data.Threat} <br/> Insult : {data.Insult} <br/> IdentityHate: {data.IdentityHate}"
                         </div>
                         <div class="cell pred" data-title="Action">
                             <ReportButtonComponent reportUser={props.reportAndBlock} id={1}/>
