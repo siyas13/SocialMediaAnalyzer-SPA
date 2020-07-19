@@ -51,7 +51,7 @@ export default (props) => (
                     "Toxicity : {data.Toxic}<br/> Obscene : {data.Obscene} <br/> Threat : {data.Threat} <br/> Insult : {data.Insult} <br/> IdentityHate: {data.IdentityHate}"
                         </div>
                         <div class="cell pred" data-title="Action">
-                            <ReportButtonComponent reportUser={props.reportAndBlock} id={1}/>
+                            <ReportButtonComponent reportUser={props.reportAndBlock} data={data}/>
                         </div>
 
                     </div>

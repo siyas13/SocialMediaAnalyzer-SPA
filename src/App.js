@@ -6,7 +6,7 @@ import PredictedResultComponent from './Components/PredictedResultComponent'
 import axios from 'axios';
 
 import './App.css';
-const endpoint = 'http://127.0.0.1:8000'
+const endpoint = 'http://localhost:8000'
 
 
 class App extends Component {
@@ -58,12 +58,17 @@ class App extends Component {
     });
   }
 
-  reportAndBlock = (id) => {
-    console.log("--------------------", this.state.analyzedResult[id])
+  reportAndBlock = (data) => {
+    console.log("------------REPORT--------", data)
+    var new_data
     axios
-    .post(endpoint+'/block/', this.state.analyzedResult[id])
+    .post(endpoint+'/block/', data)
     .then((res) => {
       console.log("response:", res)
+      new_data = this.state.analyzedResult.filter((item) => data.name !== item.name)
+      this.setState({
+        analyzedResult: new_data
+      })
     })
   }
   componentWillMount() {
